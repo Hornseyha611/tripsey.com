@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href=" data:image/jpeg;base64,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">
+    <link rel="stylesheet" href="sty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Trip.com</title>
+</head>
+<body>
+    <table class="table "></table>
+    <div class="contant ">
+        <div class="Header-left">
+             <div class="img">
+                <img src=" https://ak-d.tripcdn.com/images/05E0m12000cga1gcq4721.webp" alt="">
+                 
+            </div>
+             <div class="text">
+                <input type="text" placeholder="Serch........">
+                <i class="fa-solid fa-magnifying-glass"></i>
+             </div>
+              
+            
+        </div>
+        <div class="Header-rigth">
+            <ul>
+                <li><a href="">List your Property</a></li>
+                <li><a href="">App</a></li>
+                <li><a href="">Customer support</a></li>
+                <li><a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg/640px-Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg.png" alt=""></a></li>
+                <li><a href="">USD</a></li>
+                <li><a href="">Find Booking</a></li>
+                <li><a href="">Signin/Register</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="list">
+        <ul>
+            <li><a href="../trip/css/hotel.html">Hotels</a></li>
+            <li><a href="">Fligth</a></li>
+            <li><a href="">Train</a></li>
+            <li><a href="">Car</a></li>
+            <li><a href="">Attraction</a></li>
+            <li><a href="">Fligth+Hotel</a></li>
+            <li><a href="">Cruises</a></li>
+            <li><a href="">CustomTrip</a></li>
+            <li><a href="">Destination</a></li>
+            <li><a href="">Deail</a></li>
+        </ul>
+    </div>
+    <header>
+        <h1>Your Trip Start here</h1>
+    </header>
+    <div class="box">
+         
+            <p> <i class="fa-solid fa-check"></i> Secure Payment</p>
+            <span></span>
+            <p> <i class="fa-solid fa-check"></i> Support in approx .30s</p>
+       
+       
+    </div>
+
+   <div class="foot">
+    <div class="icon-list">
+        <ul>
+            <li><a href=""><i class="fa-solid fa-hotel"></i> Hotel</a></li>
+            <li><a href="">​ <i class="fa-solid fa-plane-circle-check"></i> Fligth</a></li>
+            <li><a href=""> <i class="fa-solid fa-train"></i>​ Trains</a></li>
+            <li><a href=""><i class="fa-solid fa-car"></i> ​ Cars</a></li>
+            <li><a href=""><i class="fa-duotone fa-solid fa-gear"></i> ​ Attraction&tour</a></li>
+            <li><a href=""><i class="fa-solid fa-square-h"></i> Flight& Hotel</a></li>
+
+        </ul>
+    </div>
+    <div class="text-page">
+        <p>Desstination</p>
+        <span>city,region,ariport,landmark</span>
+    </div>
+    <div class="text-page">
+        <p>Desstination</p>
+        <span>city,region,ariport,landmark</span>
+    </div>
+    <div class="text-page">
+        <p>Desstination</p>
+        <span>city,region,ariport,landmark</span>
+    </div>
+    <div class="serch">
+         <a href="">Serch</a>
+    </div>
+   </div>
+    <section>
+        <div class="slide">
+            <div class="card">
+                <img src="https://ak-d.tripcdn.com/images/1gz2b12000d3b4w848CAA.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src=" https://ak-d.tripcdn.com/images/0a14l12000doxd9mwD330.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src=" https://dimg04.tripcdn.com/images/0a16q12000gj0u3ztE411.png" alt="">
+            </div>
+           
+            <div class="card">
+                <img src="https://ak-d.tripcdn.com/images/1gz2b12000d3b4w848CAA.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src=" https://ak-d.tripcdn.com/images/0a14l12000doxd9mwD330.jpg" alt="">
+            </div>
+            <div class="card">
+                <img src=" https://dimg04.tripcdn.com/images/0a16q12000gj0u3ztE411.png" alt="">
+            </div>
+           
+        </div> 
+        <div class="scroll-rigth">
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </div>
+        
+    </section>
+    <article>
+        <h1>Featured Properties</h1>
+        <div class="header">
+             
+        
+            <button>Orlando</button>
+            <button>Mia Beach</button>
+            <button>New York</button>
+            <button>Las Vegas</button>
+            <button>Lose Angelas</button>
+            <button>Houston</button>
+            <button>Cancun</button>
+            </div>
+            <div class="box-card">
+                <div class="card-text">
+                    <div class="image">
+                        <img src="https://ak-d.tripcdn.com/images/0224y12000927n6vxBEBA_R_960_660_R5_D.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>DoubleTree by Hilton at The Entrance to Universal Orlando</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <pre>form$118</pre>
+                    </div>
+                    
+                    
+                </div>
+                <div class="card-text">
+                    <div class="image">
+                        <img src=" https://ak-d.tripcdn.com/images/0221r120009hkk4ngE363_R_960_660_R5_D.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>DoubleTree by Hilton at The Entrance to Universal Orlando</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <pre>form$118</pre>
+                    </div>
+                    
+                    
+                </div>
+                <div class="card-text">
+                    <div class="image">
+                        <img src=" https://ak-d.tripcdn.com/images/0223p120009mu9w2a86DD_R_600_400_R5.webp" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>DoubleTree by Hilton at The Entrance to Universal Orlando</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <pre>form$118</pre>
+                    </div>
+                    
+                    
+                </div>
+                <div class="card-text">
+                    <div class="image">
+                        <img src="https://ak-d.tripcdn.com/images/0222e120009lmib6zA832_W_1280_853_R5.webp?proc=watermark/image_trip1,l_ne,x_16,y_16,w_67,h_16;digimark/t_image,logo_tripbinary;ignoredefaultwm,1A8F" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>DoubleTree by Hilton at The Entrance to Universal Orlando</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <pre>form$118</pre>
+                    </div>
+                    
+                    
+                </div>
+               
+            </div>
+    </article>
+    
+    <article>
+        <h1> Recommended Car Rentals</h1>
+        <div class="header">
+             
+        
+            <button>Orlando</button>
+            <button>Mia Beach</button>
+            <button>New York</button>
+            <button>Las Vegas</button>
+            <button>Lose Angelas</button>
+            <button>Houston</button>
+            <button>Cancun</button>
+            </div>
+            <div class="box-card">
+                <div class="card-text">
+                    <div class="image">
+                        <img src=" https://www.popsci.com/wp-content/uploads/2022/07/29/Mark-Elias-Photo_How_To_Shoot_Cars_Story-006-scaled-1.webp" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>DoubleTree by Hilton at The Entrance to Universal Orlando</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <pre>Price$100000</pre>
+                    </div>
+                    
+                    
+                </div>
+                <div class="card-text">
+                    <div class="image">
+                        <img src="https://www.rodin-cars.com/wp-content/uploads/2024/08/sintura_revival_project_05.8.24_small_11_2048.jpg " alt="">
+                    </div>
+                    <div class="text">
+                        <h3>DoubleTree by Hilton at The Entrance to Universal Orlando</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <pre>Price$200000</pre>
+                    </div>
+                    
+                    
+                </div>
+                <div class="card-text">
+                    <div class="image">
+                        <img src=" https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2025/collections/dm/24_FRD_MST_60983_2.tif?croppathe=1_3x2&wid=900 " alt="">
+                    </div>
+                    <div class="text">
+                        <h3>DoubleTree by Hilton at The Entrance to Universal Orlando</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <pre>Price$30000</pre>
+                    </div>
+                    
+                    
+                </div>
+                <div class="card-text">
+                    <div class="image">
+                        <img src=" https://www.topgear.com/sites/default/files/news-listicle/image/2023/09/LEAD.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>DoubleTree by Hilton at The Entrance to Universal Orlando</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <pre>Price$2800</pre>
+                    </div>
+                    
+                    
+                </div>
+               
+            </div>
+    </article>
+    
+    <article>
+        <h1> Popular Attractions
+        </h1>
+        <div class="header">
+             
+        
+            <button>Bankok</button>
+            <button>Manila</button>
+            <button>ToKyo</button>
+            <button>TaiPei</button>
+            <button>Hong kong</button>
+            <button>Seoul</button>
+            
+            </div>
+            <div class="box-card">
+                <div class="card-text">
+                    <div class="image">
+                        <img src="https://ak-d.tripcdn.com/images/1lm4t12000cwldycsA928_W_800_0.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>London  Edinburgh</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div class="card-text">
+                    <div class="image">
+                        <img src="https://ak-d.tripcdn.com/images/1lm4t12000cwldycsA928_W_800_0.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>London  Edinburgh</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div class="card-text">
+                    <div class="image">
+                        <img src="https://ak-d.tripcdn.com/images/1lm4t12000cwldycsA928_W_800_0.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>London  Edinburgh</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div class="card-text">
+                    <div class="image">
+                        <img src="https://ak-d.tripcdn.com/images/1lm4t12000cwldycsA928_W_800_0.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>London  Edinburgh</h3>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+             
+            </div>
+    </article>
+    <div class="footer">
+        <div class="foot">
+            <ul>
+                <h3>App</h3>
+                <img src="https://zandokh.com/image/catalog/logo/qr_code_app.png" alt="">
+            </ul> 
+          
+        </div>
+        <div class="foot">
+             
+            <ul>
+                <h3>Follow Us</h3>
+                <li><a href=""><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                <li><a href=""><i class="fa-brands fa-tiktok"></i>   Tik Tok</a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i>   Facebook</a></li>
+                <li><a href=""><i class="fa-brands fa-youtube"></i>   YouTube</a></li>
+            </ul>
+             
+        </div>
+        <div class="foot">
+             
+            <ul>
+                <h3>CUSTOME R SERVICES</h3>
+                <li><a href=""> <i class="fa-solid fa-circle-question"></i> Online Exchange Policy</a></li>
+                <li><a href=""> <i class="fa-solid fa-circle-question"></i> Online Exchange Policy</a></li>
+                <li><a href=""><i class="fa-solid fa-shield-halved"></i>   Privatcy Policy</a></li>
+                <li><a href=""> <i class="fa-solid fa-message"></i>FaQa &guides</a></li>
+            </ul>
+        </div>
+        <div class="foot">
+            
+            <ul>
+                <h3>Contact us</h3>
+                <li><a href=""><i class="fa-solid fa-inbox"></i>@seyha trip.com</a></li>
+                <li><a href=""><i class="fa-solid fa-phone"></i>  (+885)016903850 </a></li>
+                <li><a href=""><i class="fa-solid fa-phone"></i>   (+885)016903850</a></li>
+                <li><a href="">  <i class="fa-brands fa-telegram"></i> Telegram</a></li>
+            </ul>
+        </div>
+    </div>
+   
+    
+</body>
+</html>
